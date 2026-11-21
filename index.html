@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大學修課與學習筆記庫</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <span style="font-weight: 700; color: var(--text-main);">Study Archive.</span>
+      <a href="AGENTS.md" target="_blank">查看 AGENTS.md 專案規範 ↗</a>
+    </nav>
+
+    <header>
+      <h1>大學修課與學習筆記庫</h1>
+      <p class="subtitle">依修課科目歸檔平板手寫筆記 PDF、作業解答、考試檢討與課程報告。</p>
+    </header>
+
+    <div class="filter-section">
+      <div class="filter-label">課程大項</div>
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">全部課程</button>
+        <button class="filter-btn" data-filter="calc">微積分</button>
+        <button class="filter-btn" data-filter="lin-alg">線性代數</button>
+        <button class="filter-btn" data-filter="intro-math">數學導論</button>
+        <button class="filter-btn" data-filter="discrete">離散數學</button>
+        <button class="filter-btn" data-filter="prob">機率論</button>
+        <button class="filter-btn" data-filter="inter">跨院選修</button>
+        <button class="filter-btn" data-filter="ge">通識與共同課</button>
+      </div>
+
+      <div class="filter-label">資料細項（可搭配上方課程交叉篩選）</div>
+      <div class="filter-bar">
+        <button class="type-btn active" data-type="all">全部類型</button>
+        <button class="type-btn" data-type="note">筆記</button>
+        <button class="type-btn" data-type="hw">作業</button>
+        <button class="type-btn" data-type="exam">考試</button>
+        <button class="type-btn" data-type="report">報告</button>
+      </div>
+    </div>
+
+    <!-- 筆記與檔案列表 -->
+    <div class="notes-grid" id="notes-grid">
+      <a class="note-card" href="notes/2026-11-21-discrete-hw-midterm2-exercises.html" data-category="discrete" data-type="hw">
+        <div class="tag-group">
+          <span class="tag">離散數學</span>
+          <span class="tag type-hw">作業</span>
+        </div>
+        <h2>離散數學習題詳解（Midterm 2 範圍：Ch.6 生成函數 & Ch.7 遞迴關係）</h2>
+        <p>第二次期中考範圍（Ch.6–Ch.7）手寫習題詳解，涵蓋 OGF/EGF 生成函數、整數分割費雪圖、狀態轉移遞迴與分治關係。</p>
+        <div class="card-footer">
+          <span>2026-11-21</span>
+          <span class="pdf-badge">PDF 內嵌版</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-10-28-discrete-hw-midterm1-exercises.html" data-category="discrete" data-type="hw">
+        <div class="tag-group">
+          <span class="tag">離散數學</span>
+          <span class="tag type-hw">作業</span>
+        </div>
+        <h2>離散數學習題詳解（Midterm 1 範圍：Ch.5 排列組合與組合恆等式）</h2>
+        <p>第一次期中考範圍（Ch.5）完整手寫習題與訂正筆記，涵蓋基本計數、隔板法、組合恆等式與卡特蘭數反射原理。</p>
+        <div class="card-footer">
+          <span>2026-10-28</span>
+          <span class="pdf-badge">PDF 內嵌版</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-09-30-discrete-exam-quizzes.html" data-category="discrete" data-type="exam">
+        <div class="tag-group">
+          <span class="tag">離散數學</span>
+          <span class="tag type-exam">考試</span>
+        </div>
+        <h2>離散數學小考彙整（計數原理、排列組合與重複組合）</h2>
+        <p>收錄三次課堂小考（09/16、09/23、09/30）手寫解答，涵蓋古典機率、撲克牌型計數、條件排列與重複組合。</p>
+        <div class="card-footer">
+          <span>2026-09-30</span>
+          <span class="pdf-badge">PDF 內嵌版</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-11-21-calc-note-epsilon-delta.html" data-category="calc" data-type="note">
+        <div class="tag-group">
+          <span class="tag">微積分</span>
+          <span class="tag type-note">筆記</span>
+        </div>
+        <h2>極限的 $\varepsilon$-$\delta$ 嚴格定義與連續性證明</h2>
+        <p>平板手寫章節筆記匯出，整理單變數與多變數函數極限的 $\varepsilon$-$\delta$ 證明架構與夾擠定理。</p>
+        <div class="card-footer">
+          <span>2026-11-21</span>
+          <span class="pdf-badge">PDF 內嵌版</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-11-21-prob-exam-midterm.html" data-category="prob" data-type="exam">
+        <div class="tag-group">
+          <span class="tag">機率論</span>
+          <span class="tag type-exam">考試</span>
+        </div>
+        <h2>機率論期中考錯題檢討：條件機率與隨機變數</h2>
+        <p>整理貝氏定理應用、離散與連續隨機變數期望值計算，以及變異數線性變換的常見計算陷阱。</p>
+        <div class="card-footer">
+          <span>2026-11-21</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-11-21-lin-alg-hw-eigenvalues.html" data-category="lin-alg" data-type="hw">
+        <div class="tag-group">
+          <span class="tag">線性代數</span>
+          <span class="tag type-hw">作業</span>
+        </div>
+        <h2>HW04：特徵值、特徵向量與矩陣對角化</h2>
+        <p>計算特徵多項式、幾何重數與代數重數判別，以及正交對角化手寫推導過程。</p>
+        <div class="card-footer">
+          <span>2026-11-21</span>
+        </div>
+      </a>
+
+      <a class="note-card" href="notes/2026-11-21-ge-report-cultural-analysis.html" data-category="ge" data-type="report">
+        <div class="tag-group">
+          <span class="tag">通識與共同課</span>
+          <span class="tag type-report">報告</span>
+        </div>
+        <h2>社會文化分析期末觀察：現代都市空間與日常規訓</h2>
+        <p>課堂文本導讀與田野觀察報告，探討公共空間設計如何影響個體的移動路徑與社交邊界。</p>
+        <div class="card-footer">
+          <span>2026-11-21</span>
+        </div>
+      </a>
+    </div>
+
+    <footer>
+      Built with AGENTS.md Workflow · Maintained by 陳品岑
+    </footer>
+  </div>
+
+  <script>
+    let currentCategory = 'all';
+    let currentType = 'all';
+
+    const catButtons = document.querySelectorAll('.filter-btn');
+    const typeButtons = document.querySelectorAll('.type-btn');
+    const cards = document.querySelectorAll('.note-card');
+
+    function filterCards() {
+      cards.forEach(card => {
+        const matchCat = (currentCategory === 'all' || card.getAttribute('data-category') === currentCategory);
+        const matchType = (currentType === 'all' || card.getAttribute('data-type') === currentType);
+        card.style.display = (matchCat && matchType) ? 'block' : 'none';
+      });
+    }
+
+    catButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        catButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-filter');
+        filterCards();
+      });
+    });
+
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentType = btn.getAttribute('data-type');
+        filterCards();
+      });
+    });
+  </script>
+</body>
+</html>

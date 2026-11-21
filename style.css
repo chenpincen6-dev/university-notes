@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;700&display=swap');
+
+:root {
+  --bg-primary: #F7F7F5;
+  --bg-card: #FFFFFF;
+  --text-main: #2C2E2D;
+  --text-muted: #6E7370;
+  --accent-color: #5B7065;
+  --accent-light: #EBF0ED;
+  /* 四大細項標籤配色 */
+  --tag-note-bg: #EBF0ED;
+  --tag-note-text: #4F6358;
+  --tag-hw-bg: #E8EEF2;
+  --tag-hw-text: #4A6572;
+  --tag-exam-bg: #F3EBE8;
+  --tag-exam-text: #8C5346;
+  --tag-report-bg: #F2EFE6;
+  --tag-report-text: #7A6A47;
+  --border-color: #E2E4E1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.75;
+  padding: 2rem 1.5rem;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 導覽與標頭 */
+nav {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  margin-bottom: 1.8rem;
+}
+
+header h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+header p.subtitle {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* 雙層篩選器（課程大項 + 細項類型） */
+.filter-section {
+  margin-bottom: 2rem;
+}
+
+.filter-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.filter-btn, .type-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.38rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: var(--accent-color);
+  color: #FFFFFF;
+  border-color: var(--accent-color);
+}
+
+.type-btn:hover, .type-btn.active {
+  background: #3F4240;
+  color: #FFFFFF;
+  border-color: #3F4240;
+}
+
+/* 首頁筆記卡片網格 */
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+  gap: 1.2rem;
+}
+
+.note-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.4rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(44, 46, 45, 0.05);
+  border-color: var(--accent-color);
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent-color);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+}
+
+.tag.type-note { background: var(--tag-note-bg); color: var(--tag-note-text); }
+.tag.type-hw { background: var(--tag-hw-bg); color: var(--tag-hw-text); }
+.tag.type-exam { background: var(--tag-exam-bg); color: var(--tag-exam-text); }
+.tag.type-report { background: var(--tag-report-bg); color: var(--tag-report-text); }
+
+.note-card h2 {
+  font-size: 1.12rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.note-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.pdf-badge {
+  border: 1px solid var(--border-color);
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* 內頁專用區塊 */
+.summary-box {
+  background: var(--accent-light);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.1rem 1.4rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.8rem;
+  font-size: 0.95rem;
+}
+
+article {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+article h2 {
+  font-size: 1.3rem;
+  margin: 1.6rem 0 0.8rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+article h2:first-child {
+  margin-top: 0;
+}
+
+article p, article ul, article ol {
+  margin-bottom: 1rem;
+}
+
+article ul, article ol {
+  padding-left: 1.5rem;
+}
+
+.theorem-block, .quote-block {
+  background: var(--bg-primary);
+  border-left: 3px solid var(--accent-color);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.proof-block {
+  border: 1px dashed var(--border-color);
+  padding: 1rem 1.2rem;
+  margin: 1.2rem 0;
+  border-radius: 6px;
+}
+
+/* PDF 嵌入檢視器 */
+.pdf-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border-color);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.88rem;
+}
+
+.pdf-btn {
+  background: var(--accent-color);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 0.35rem 0.8rem;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.pdf-btn:hover {
+  opacity: 0.9;
+}
+
+.pdf-frame {
+  width: 100%;
+  height: 680px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 8px 8px;
+  background: #EAEAE6;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
