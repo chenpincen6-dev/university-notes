@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[標題] — 大學修課與學習筆記庫</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../index.html">← 返回筆記總覽</a>
+      <span style="color: var(--text-muted); font-size: 0.9rem;">Study Archive.</span>
+    </nav>
+
+    <header>
+      <div class="tag-group">
+        <span class="tag">[課程名稱]</span>
+        <!-- 細項四選一：type-note (筆記) / type-hw (作業) / type-exam (考試) / type-report (報告) -->
+        <span class="tag type-note">筆記</span>
+      </div>
+      <h1>[標題]</h1>
+      <p class="subtitle">建立日期：YYYY-MM-DD · 授課教師：[教師姓名]</p>
+    </header>
+
+    <div class="summary-box">
+      <strong>重點摘要：</strong> 在此簡述本份檔案的核心定理、作業題目或考試重點。
+    </div>
+
+    <article>
+      <h2>一、手寫筆記 / 檔案預覽 (PDF)</h2>
+      <p style="font-size: 0.9rem; color: var(--text-muted);">將平板匯出的 PDF 放入 <code>pdfs/</code> 資料夾並修改下方檔名，即可直接在網頁預覽：</p>
+      
+      <div class="pdf-toolbar">
+        <span>檔案名稱：<code>example.pdf</code></span>
+        <a class="pdf-btn" href="../pdfs/example.pdf" target="_blank">在新分頁開啟 / 下載 PDF ↗</a>
+      </div>
+      <iframe class="pdf-frame" src="../pdfs/example.pdf" title="PDF 預覽"></iframe>
+
+      <h2>二、重點文字補充（選填）</h2>
+      <div class="theorem-block">
+        <strong>核心公式：</strong> 支援行內公式 $x^2 + y^2 = r^2$ 與獨立區塊公式。
+      </div>
+    </article>
+
+    <footer>
+      Built with AGENTS.md Workflow · Maintained by 陳品岑
+    </footer>
+  </div>
+</body>
+</html>

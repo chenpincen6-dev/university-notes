@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>機率論期中考錯題檢討：條件機率與隨機變數 — 大學修課與學習筆記庫</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../index.html">← 返回筆記總覽</a>
+      <span style="color: var(--text-muted); font-size: 0.9rem;">Study Archive.</span>
+    </nav>
+
+    <header>
+      <div class="tag-group">
+        <span class="tag">機率論</span>
+        <span class="tag type-exam">考試</span>
+      </div>
+      <h1>機率論期中考錯題檢討：條件機率與隨機變數</h1>
+      <p class="subtitle">建立日期：2026-11-21 · 授課教師：林建同</p>
+    </header>
+
+    <div class="summary-box">
+      <strong>檢討重點：</strong> 計算連續隨機變數的條件期望值與變異數時，務必先確認積分上下限（Support 範圍），並注意 $\text{Var}(aX + b) = a^2\text{Var}(X)$ 的平方係數。
+    </div>
+
+    <article>
+      <h2>一、錯題回顧與題目敘述</h2>
+      <div class="theorem-block">
+        <strong>題目：</strong><br>
+        設連續型隨機變數 $X$ 的機率密度函數為 $f_X(x) = 2x$，$0 < x < 1$（其餘為 $0$）。求 $E[X]$ 與 $\text{Var}(3X - 2)$。
+      </div>
+
+      <h2>二、正確詳解與錯因分析</h2>
+      <div class="proof-block">
+        <strong>解題步驟：</strong>
+        <ol>
+          <li>計算一階動差：$E[X] = \int_{0}^{1} x \cdot (2x) \, dx = \frac{2}{3}$</li>
+          <li>計算二階動差：$E[X^2] = \int_{0}^{1} x^2 \cdot (2x) \, dx = \frac{1}{2}$</li>
+          <li>求變異數：$\text{Var}(X) = \frac{1}{2} - \frac{4}{9} = \frac{1}{18}$，故 $\text{Var}(3X - 2) = 3^2 \text{Var}(X) = \frac{1}{2}$。</li>
+        </ol>
+      </div>
+    </article>
+
+    <footer>
+      Built with AGENTS.md Workflow · Maintained by 陳品岑
+    </footer>
+  </div>
+</body>
+</html>

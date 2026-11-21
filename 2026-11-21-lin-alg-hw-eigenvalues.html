@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HW04：特徵值、特徵向量與矩陣對角化 — 大學修課與學習筆記庫</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../index.html">← 返回筆記總覽</a>
+      <span style="color: var(--text-muted); font-size: 0.9rem;">Study Archive.</span>
+    </nav>
+
+    <header>
+      <div class="tag-group">
+        <span class="tag">線性代數</span>
+        <span class="tag type-hw">作業</span>
+      </div>
+      <h1>HW04：特徵值、特徵向量與矩陣對角化</h1>
+      <p class="subtitle">建立日期：2026-11-21 · 授課教師：王以晟</p>
+    </header>
+
+    <div class="summary-box">
+      <strong>作業重點：</strong> 透過解特徵方程式 $\det(A - \lambda I) = 0$ 求特徵值，並檢查每個特徵空間的維度（幾何重數）是否等於代數重數以判斷可否對角化。
+    </div>
+
+    <article>
+      <h2>一、核心解題流程</h2>
+      <div class="theorem-block">
+        <strong>對角化判別準則：</strong><br>
+        設 $A$ 為 $n \times n$ 方陣，若 $A$ 具有 $n$ 個線性獨立的特徵向量 $v_1, \dots, v_n$，則令 $P = [v_1 \cdots v_n]$，可得：
+        $$P^{-1} A P = D = \text{diag}(\lambda_1, \dots, \lambda_n)$$
+      </div>
+    </article>
+
+    <footer>
+      Built with AGENTS.md Workflow · Maintained by 陳品岑
+    </footer>
+  </div>
+</body>
+</html>
